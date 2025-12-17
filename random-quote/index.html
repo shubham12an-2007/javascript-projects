@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+
+    <style>
+        .quote-container {
+  width: 350px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#6366f1,#22d3ee);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#quoteDisplay {
+  font-size: 18px;
+  margin: 20px 0;
+  min-height: 50px;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #fff;
+  color: #6366f1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="quote-container">
+  <h2>Random Quote</h2>
+  <p id="quoteDisplay">Click the button to see a quote!</p>
+  <button id="newQuoteBtn">New Quote</button>
+</div>
+
+<script src="quote_generator.js"></script>
+    
+</body>
+</html>
