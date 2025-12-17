@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes App</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="notes.css">
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen flex flex-col items-center justify-start pt-10">
+
+  <!-- ================= ADD NOTE FORM (HIDDEN BY DEFAULT) ================= -->
+  <section class="overlay" id="formOverlay">
+    <form class="note-form" id="noteForm">
+      <h2>Add New Note</h2>
+
+      <input type="text" id="name" placeholder="Full Name" />
+      <input type="text" id="hometown" placeholder="Hometown" />
+
+      <div class="row">
+        <input type="number" id="bookings" placeholder="Bookings" />
+        <input type="time" id="time" />
+      </div>
+
+      <textarea id="noteText" placeholder="Write note..."></textarea>
+
+      <button type="submit">Add Note</button>
+    </form>
+  </section>
+
+  <!-- ================= NOTES SECTION ================= -->
+  <main class="notes-wrapper flex flex-col items-center gap-6 w-full max-w-md">
+
+    <!-- DEFAULT EXAMPLE NOTE CARD -->
+    <div class="note-card">
+
+      <!-- Floating Left Add Button -->
+      <div class="float-left" id="addBtn">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+
+      <!-- Floating Right Controls -->
+      <div class="float-right">
+        <i class="fa-solid fa-chevron-up"></i>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+      <div class="card-body text-center">
+
+        <div class="avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <h3>Rahul Sharma</h3>
+        <p class="muted">Delhi, India</p>
+
+        <div class="meta flex justify-between mt-3 text-sm">
+          <span>📘 12 Bookings</span>
+          <span>⏱ 10:30 AM</span>
+        </div>
+
+        <p class="note-text mt-2 text-slate-300 text-sm">This is an example note.</p>
+
+        <div class="actions flex gap-2 mt-3">
+          <button class="call flex-1 flex items-center justify-center gap-1">
+            <i class="fa-solid fa-phone"></i> Call
+          </button>
+          <button class="msg flex-1 flex items-center justify-center gap-1">
+            <i class="fa-solid fa-message"></i> Message
+          </button>
+        </div>
+
+        <div class="color-tabs flex justify-center gap-2 mt-3">
+          <span class="red"></span>
+          <span class="blue"></span>
+          <span class="green"></span>
+          <span class="orange"></span>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script src="notes.js"></script>
+</body>
+</html>
+
